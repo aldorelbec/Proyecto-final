@@ -60,7 +60,12 @@ function App() {
       {!loading && !error && (
         <div>
           <h2>Películas Populares</h2>
-          <pre>{JSON.stringify(movies, null, 2)}</pre>
+          <ul>
+  {movies.map((movie) => (
+    <li key={movie.id}>{movie.title}</li>
+  ))}
+</ul>
+          
         </div>
       )}
     </div>
